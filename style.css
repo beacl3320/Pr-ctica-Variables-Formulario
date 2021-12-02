@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Raleway:wght@300;700&display=swap');
+
+:root{
+    --gradient: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    --gradient1: linear-gradient(to top, #fbc2eb85 0%, #a6c0ee86 100%);
+    --url-img: url("assets/imagen.jpg");
+    --box-shadow: 6px 6px 10px rgba(0,0,0,0.6);
+    --width: 100%;
+    --radius: 8px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-image: var(--gradient1), var(--url-img);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.form{
+    width: 400px;
+    background: #fff;
+    margin: 150px auto;
+    padding: 30px 20px 40px 20px;
+    text-align: center;
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.input{
+    width: var(--width);
+    padding: 20px 5px;
+    display: block;
+    margin-bottom: 20px;
+    border: 1px sollid salmon;
+    outline: none;
+}
+
+.input, .form__submit{
+    font-family: inherit;
+}
+
+.form__title{
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: rgb(240, 85, 111);
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+}
+
+.form__message{
+    max-width: var(--width);
+    min-width: var(--width);
+    min-height: 150px;
+    max-height: 150px;
+}
+
+.form__submit{
+    width: var(--width);
+    font-size: 18px;
+    background-image: var(--gradient);
+    padding: 15px 13px;
+    border: none;
+    color: rgb(240, 85, 111);
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+}
+
+.form__submit:hover{
+    background-image: var(--gradient1);
+}
+
+@media screen and (max-width: 768px) {
+    .form{
+        margin: 20% auto;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .form{
+        width: 70%;
+    }
+    .form__title{
+        font-size: 1.5rem;
+    }
+}
